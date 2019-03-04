@@ -1,0 +1,380 @@
+{
+	"info": {
+		"_postman_id": "0aa1f6ee-5f53-4ba6-bcd6-02b921fbe31b",
+		"name": "LivePerson",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get the keys",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/keys",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"keys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get the users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/users",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authenticate Jonathan Jones",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userId\": \"jonathan.jones@te.com\",\n\t\"password\": \"jonathanjones\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}/authenticate",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User 982373",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/users/982373",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"users",
+						"982373"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get the films",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/films",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"films"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get films by Genres",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/films?Genre=Adventure&Genre=Sci-Fi",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"films"
+					],
+					"query": [
+						{
+							"key": "Genre",
+							"value": "Adventure"
+						},
+						{
+							"key": "Genre",
+							"value": "Sci-Fi"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get films by Genre and Stars",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/films?Genre=Adventure&Genre=Sci-Fi&Stars=Ben Kingsley",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"films"
+					],
+					"query": [
+						{
+							"key": "Genre",
+							"value": "Adventure"
+						},
+						{
+							"key": "Genre",
+							"value": "Sci-Fi"
+						},
+						{
+							"key": "Stars",
+							"value": "Ben Kingsley"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get films by Studio",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/films?Studio=BV",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"films"
+					],
+					"query": [
+						{
+							"key": "Studio",
+							"value": "BV"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get films by Title fragment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/films?Title=Avengers",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"films"
+					],
+					"query": [
+						{
+							"key": "Title",
+							"value": "Avengers"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get films by Decade",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/films?Genre=Adventure&Genre=Sci-Fi",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"films"
+					],
+					"query": [
+						{
+							"key": "Genre",
+							"value": "Adventure"
+						},
+						{
+							"key": "Genre",
+							"value": "Sci-Fi"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Widget page for 982373",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/widgetPage?userAccountNumber=982373",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"widgetPage"
+					],
+					"query": [
+						{
+							"key": "userAccountNumber",
+							"value": "982373"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
